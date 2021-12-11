@@ -1,0 +1,47 @@
+<div class="mat-elevation-z8">
+  <div class="table-options ml-3 w-100">
+    <mat-form-field>
+      <input matInput type="text" [formControl]="sizeGenerator">
+    </mat-form-field>
+    <button color="primary" class="ml-3" mat-flat-button (click)="generate()">Generate</button>
+    <button color="primary" class="ml-3" mat-flat-button (click)="save()">Save</button>
+
+    <mat-form-field appearance="standard" class="ml-3 w-100w-250">
+      <mat-label>Filter</mat-label>
+      <input matInput [formControl]="filterControl" placeholder="Ex. ium">
+    </mat-form-field>
+  </div>
+  <mat-progress-bar mode="determinate" [value]="syncProgress"
+                    *ngIf="syncProgress > 0 && syncProgress < 100"></mat-progress-bar>
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID</th>
+      <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="progress">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress</th>
+      <td mat-cell *matCellDef="let row"> {{row.progress}}%</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name</th>
+      <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+    </ng-container>
+
+    <!-- Fruit Column -->
+    <ng-container matColumnDef="fruit">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Fruit</th>
+      <td mat-cell *matCellDef="let row"> {{row.fruit}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+</div>
