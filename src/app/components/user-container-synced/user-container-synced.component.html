@@ -6,6 +6,15 @@
       <mat-label>Filter</mat-label>
       <input matInput [formControl]="filterControl" placeholder="Ex. ium" #input>
     </mat-form-field>
+    <span class="grow"></span>
+    <button mat-icon-button class="mr-3" matTooltip="Descargar Excel De Datos Filtrados"
+            (click)="exportExcelDatosFiltrados()">
+      <mat-icon class="mat-18">file_download</mat-icon>
+    </button>
+    <button mat-icon-button class="mr-3" matTooltip="Descargar Excel de Todos Los Datos"
+            (click)="exportExcelTodosLosDatos()">
+      <mat-icon class="mat-18">file_download</mat-icon>
+    </button>
   </div>
   <table mat-table [dataSource]="dataSource" matSort>
 

@@ -21,6 +21,7 @@ import {MatSortModule} from "@angular/material/sort";
 import {HttpClientModule} from "@angular/common/http";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {UserContainerSyncedComponent} from "./components/user-container-synced/user-container-synced.component";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
@@ -29,26 +30,27 @@ import {UserContainerSyncedComponent} from "./components/user-container-synced/u
     UserContainerComponent,
     UserContainerSyncedComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    FormsModule,
-    MatSortModule,
-    HttpClientModule,
-    MatProgressBarModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        LayoutModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        FormsModule,
+        MatSortModule,
+        HttpClientModule,
+        MatProgressBarModule,
+        MatTooltipModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
