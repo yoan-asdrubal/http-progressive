@@ -21,6 +21,6 @@ Run `ng serve` para servidor de pruebas. Navigate to `http://localhost:4200/`.
 
 ### Al realizar el post progresivo, si se hace con muchos elementos se podra notar una barra de progreso, como ejemplo de una integracion sencilla con el progreso de la operacion qeu se esta haciendo. 
 ### Las tablas tienen una implementacion de filtro basada en formulario reactivo y rxjs.
- ### Se muestran dos tablas, una para generar datos y enviar para el backend, y la otra para visualizar los datos ya guardados.
+### Se muestran dos tablas, una para generar datos y enviar para el backend, y la otra para visualizar los datos ya guardados.
 ### Si se intenta guardar datos previamente registrados dara error del backend por id repetido. 
- 
+### Se agrego un ejemplo para exportar datos de la tabla a excel usando exceljs
